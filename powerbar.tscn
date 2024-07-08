@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ccsuwrxckp178"]
+
+[node name="powerbar" type="ProgressBar"]
+anchors_preset = -1
+anchor_left = 0.003
+anchor_right = 0.003
+offset_left = 127.544
+offset_top = 288.0
+offset_right = 478.544
+offset_bottom = 354.0

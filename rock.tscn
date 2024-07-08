@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp368cye2fn17"]
+
+[ext_resource type="Texture2D" uid="uid://cl4sgjpml500f" path="res://New Piskel-1.png(1).png" id="1_6qvvn"]
+[ext_resource type="Script" path="res://rock.gd" id="1_r6fn1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ksxuv"]
+
+[node name="Node2D" type="RigidBody2D"]
+script = ExtResource("1_r6fn1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(1.20312, 1.14062)
+texture = ExtResource("1_6qvvn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_ksxuv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

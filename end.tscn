@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3nd1ujqukmc0"]
+
+[ext_resource type="Texture2D" uid="uid://decrk6jmvtjyh" path="res://i4j7gqanp59y.png" id="1_nt27f"]
+[ext_resource type="Script" path="res://Label.gd" id="2_qlbp4"]
+[ext_resource type="Script" path="res://Button.gd" id="3_0m07v"]
+[ext_resource type="AudioStream" uid="uid://byk74tbb84647" path="res://626950__maikkihapsis__tadaa.wav" id="4_io5xk"]
+
+[node name="Node2D" type="Sprite2D"]
+position = Vector2(576, 337.5)
+scale = Vector2(1.07895, 1.09106)
+texture = ExtResource("1_nt27f")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.95
+
+[node name="Label" type="Label" parent="."]
+offset_left = -340.146
+offset_top = -181.017
+offset_right = -198.146
+offset_bottom = -78.0167
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+script = ExtResource("2_qlbp4")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -83.4147
+offset_top = 190.182
+offset_right = 49.5853
+offset_bottom = 245.182
+text = "PLAY AGAIN"
+script = ExtResource("3_0m07v")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_io5xk")
+autoplay = true
+
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]

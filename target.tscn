@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnswl0ibrlpnq"]
+
+[ext_resource type="Texture2D" uid="uid://tel4ymcntoy" path="res://transparent-white-background-archery-target-with-blue-bulls-eye-and-arrows65b4b61980a3a5.0331922817063419135269.png" id="1_88ta3"]
+[ext_resource type="Script" path="res://target.gd" id="1_ynbf0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pvi4d"]
+radius = 25.1794
+
+[node name="target" type="Area2D"]
+script = ExtResource("1_ynbf0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(0.0351563, 0.0328125)
+texture = ExtResource("1_88ta3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_pvi4d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
